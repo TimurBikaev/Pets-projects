@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset style="width: 23%; text-align: center">
+      <legend>1) Введите объем топлива:</legend>
+      <div class="counter">0</div>
+      <button class="inc-btn">Add +1</button>
+      <button class="min-btn">Min -1</button>
+      <button class="clear-btn">Reset</button>
+      <input type="range" id="volume" name="volume" min="1" max="100" />
+    </fieldset>
+
+    <fieldset style="width: 23%; text-align: center">
+      <legend>2) Выберите тип бензина</legend>
+      <button class="gas" price="45">АИ 92</button>
+      <button class="gas" price="48">АИ 95</button>
+      <button class="gas" price="50">АИ 98</button>
+      <br />
+    </fieldset>
+    К оплате:
+    <div class="amount"></div>
+
+    <script src="simple-counter.js"></script>
+  </body>
+</html>
