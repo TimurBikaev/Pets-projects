@@ -4,28 +4,82 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>GasStation</title>
   </head>
   <body>
-    <fieldset style="width: 23%; text-align: center">
-      <legend>1) Введите объем топлива:</legend>
-      <div class="counter">0</div>
+    <fieldset style="width: 350px">
+      <legend>Введите объем топлива:</legend>
+      <div style="text-align: center" type="number" class="counter">0</div>
       <button class="inc-btn">Add +1</button>
       <button class="min-btn">Min -1</button>
       <button class="clear-btn">Reset</button>
-      <input type="range" id="volume" name="volume" min="1" max="100" />
+      <br />
+      <input type="range" id="volume" name="volume" min="0" max="100" />
     </fieldset>
 
-    <fieldset style="width: 23%; text-align: center">
-      <legend>2) Выберите тип бензина</legend>
-      <button class="gas" price="45">АИ 92</button>
-      <button class="gas" price="48">АИ 95</button>
-      <button class="gas" price="50">АИ 98</button>
+    <fieldset style="width: 350px">
+      <legend>Выберите тип бензина</legend>
+      <button class="gas" price="45" ai="АИ 92">АИ 92</button>
+      <button class="gas" price="48" ai="АИ 95">АИ 95</button>
+      <button class="gas" price="50" ai="АИ 98">АИ 98</button>
       <br />
     </fieldset>
-    К оплате:
-    <div class="amount"></div>
 
+    <fieldset style="width: 350px">
+      <legend>Желаете ли выпечку и кофе в дорогу?</legend>
+      <input
+        type="checkbox"
+        class="coffee1"
+        name="Американо"
+        id="coffee1"
+        price="100"
+      />
+      <label for="coffee1">Американо</label>
+
+      <input
+        type="checkbox"
+        class="coffee2"
+        name="Капучино"
+        id="coffee2"
+        price="110"
+      />
+      <label for="coffee2">Капучино</label>
+      <br />
+      <input
+        type="checkbox"
+        class="hot-dog"
+        name="Хот-Дог"
+        id="hot-dog"
+        price="130"
+      />
+      <label for="hot-dog">Хот-Дог</label>
+
+      <input
+        type="checkbox"
+        class="pecan"
+        name="Кленовый пекан"
+        id="pecan"
+        price="90"
+      />
+      <label for="pecan">Кленовый пекан</label>
+    </fieldset>
+    <button class="tot-btn">ИТОГ</button>
+    <fieldset class="total" style="width: 350px">
+      <legend>Счет:</legend>
+
+      <div style="margin-left: 10px" class="amount-gas"></div>
+      <div style="margin-left: 10px" class="amount-eat1"></div>
+      <div style="margin-left: 10px" class="amount-eat2"></div>
+      <div style="margin-left: 10px" class="amount-eat3"></div>
+      <div style="margin-left: 10px" class="amount-eat4"></div>
+      <br />
+      <div
+        style="margin: 10px; font-weight: bold; font-size: 18px"
+        class="amount-total"
+      ></div>
+    </fieldset>
     <script src="simple-counter.js"></script>
   </body>
 </html>
